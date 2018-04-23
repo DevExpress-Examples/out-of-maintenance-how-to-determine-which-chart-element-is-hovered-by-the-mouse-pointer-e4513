@@ -1,0 +1,7 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             x:Class="DetermineHoveredElements.App" xmlns:my="clr-namespace:System;assembly=mscorlib">
+  <Application.Resources>
+    <my:String x:Key="DevExpress.Xpf.License">5D-9F-FC-9F-C1-46-31-CD-FE-86-1A-41-E6-16-9C-F8-31-1B-B3-B0</my:String>
+  </Application.Resources>
+</Application>

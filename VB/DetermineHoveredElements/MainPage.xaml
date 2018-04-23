@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="DetermineHoveredElements.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="350" d:DesignWidth="550" 
+    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" 
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel  Grid.Row="0" Grid.Column="0" >
+            <sdk:Label Name="text1" />
+        </StackPanel>
+        <dxc:ChartControl Grid.Row="0" Grid.Column="1" Name="chartControl1" 
+                          CrosshairEnabled="False" MouseMove="chartControl1_MouseMove">
+            <dxc:XYDiagram2D >
+                <dxc:BarSideBySideSeries2D  x:Name="series1" LabelsVisibility="True" 
+                                            DisplayName="Series1">
+                    <dxc:SeriesPoint Argument="A" Value="1" />
+                    <dxc:SeriesPoint Argument="B" Value="2" />
+                    <dxc:SeriesPoint Argument="C" Value="3" />
+                    <dxc:SeriesPoint Argument="D" Value="4" />
+                </dxc:BarSideBySideSeries2D>
+                <dxc:BarSideBySideSeries2D x:Name="series2" LabelsVisibility="True" 
+                                           DisplayName="Series2">
+                    <dxc:SeriesPoint Argument="A" Value="4" />
+                    <dxc:SeriesPoint Argument="B" Value="3" />
+                    <dxc:SeriesPoint Argument="C" Value="2" />
+                    <dxc:SeriesPoint Argument="D" Value="1" />
+                </dxc:BarSideBySideSeries2D>
+                <dxc:XYDiagram2D.AxisY>
+                    <dxc:AxisY2D >
+                        <dxc:AxisY2D.Title>
+                            <dxc:AxisTitle Content="AxisY Title"/>
+                        </dxc:AxisY2D.Title>
+                        <dxc:AxisY2D.Label>
+                            <dxc:AxisLabel Name="AxisYLabel" />
+                        </dxc:AxisY2D.Label>
+                    </dxc:AxisY2D>
+                </dxc:XYDiagram2D.AxisY>
+                <dxc:XYDiagram2D.AxisX>
+                    <dxc:AxisX2D>
+                        <dxc:AxisX2D.Label>
+                            <dxc:AxisLabel  Name="AxisXLabel"/>
+                        </dxc:AxisX2D.Label>
+                    </dxc:AxisX2D>
+                </dxc:XYDiagram2D.AxisX>
+            </dxc:XYDiagram2D>
+            <dxc:ChartControl.Titles>
+                <dxc:Title Content="My Chart" />
+            </dxc:ChartControl.Titles>
+            <dxc:ChartControl.Legend>
+                <dxc:Legend />
+            </dxc:ChartControl.Legend>
+        </dxc:ChartControl>
+    </Grid>
+</UserControl>
